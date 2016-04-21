@@ -32,7 +32,7 @@ function onKeyboardShow( keyboardShowEvent )
   for ( let i = listeners.length - 1; i >= 0; i-- )
   {
     const listener = listeners[i].listener;
-    const listenerDidHandle = listener( currentHeight, keyboardShowEvent.duration || 0 );
+    const listenerDidHandle = listener( currentHeight, keyboardShowEvent.duration || 100 );
     if ( listenerDidHandle )
     {
       return;
@@ -48,7 +48,7 @@ function onKeyboardHide( keyboardHideEvent )
   for ( let i = listeners.length - 1; i >= 0; i-- )
   {
     const listener = listeners[i].listener;
-    const listenerDidHandle = listener( currentHeight, keyboardHideEvent ? keyboardHideEvent.duration : 0 );
+    const listenerDidHandle = listener( currentHeight, keyboardHideEvent ? keyboardHideEvent.duration : 100 );
     if ( listenerDidHandle )
     {
       return;
