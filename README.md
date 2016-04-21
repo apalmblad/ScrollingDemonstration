@@ -69,7 +69,7 @@ And then everything was great! Except that it wasn't. I found that the method wo
   
 ![Image:](http://i.imgur.com/gIiMgm3.gif)
   
-taken on iOS with SHOULD_ANIMATE_CONTAINER = true and SHOULD_SCROLL_INTO_FOCUS = true
+taken on iOS with SHOULD_ANIMATE_CONTAINER = true and SHOULD_SCROLL_INTO_FOCUS = true SHOULD_CONTENT_EXPAND_PAST_SCREEN = true and the block below commented out
   
 After a lot of head scratching and trying new things I discovered the issue was that the following block in the `scrollResponderInputMeasureAndScrollToKeyboard` callback of the `scrollResponderScrollNativeHandleToKeyboard` method was not running:
   
